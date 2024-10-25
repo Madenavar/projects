@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruit CRM Sourcing Extension</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    /* Basic styles for layout and UI */
+    .header {
+      background: linear-gradient(white,rgb(6, 87, 141));
+      color: rgb(60, 59, 59);
+      padding: 10px;
+      text-align: center;
+    }
+    
+    
+    .main-container {
+      display: flex;
+      padding: 15px;
+      background-color: #f4f4f9;
+    }
+    .sidebar, .content {
+      padding: 15px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .sidebar {
+      width: 30%;
+      background-color: #fff;
+    }
+    .content {
+      width: 65%;
+      background-color: #fff;
+    }
+    .footer {
+      padding: 10px;
+      text-align: center;
+      background-color: #e0e0e0;
+      border-top: 1px solid #ccc;
+    }
+    .btn {
+      padding: 10px 15px;
+      color: white;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .status-message {
+      padding: 10px;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .status-success {
+      background-color: #28a745;
+    }
+    .status-error {
+      background-color: #dc3545;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header"  >
+    <img style="float: left;" class="img" src="Recruit-CRM-Logo-01.png" height="75vh" width="150vh" >
+    <h2>Recruit CRM Sourcing Extension</h2>
+    <span>Efficient candidate sourcing from LinkedIn</span>
+  </div>
+
+  <!-- Main Layout Container -->
+  <div class="main-container">
+
+    
+
+    <!-- Sidebar for Candidate Details -->
+    <div class="sidebar">
+      <h3>Candidate Details</h3>
+      <label>Name:</label><br>
+      <input type="text" placeholder="Full Name" style="width: 73%; padding: 8px;"><br><br>
+      
+      <label>Position:</label><br>
+      <input type="text" placeholder="Current Position" style="width: 73%; padding: 8px;"><br><br>
+      
+      <label>Tags:</label><br>
+      <input type="text" placeholder="Add tags" style="width: 73%; padding: 8px;"><br><br>
+      
+      <label>Notes:</label><br>
+      <textarea placeholder="Add notes here..." style="width: 73%; padding: 8px;"></textarea><br><br>
+
+      <button class="btn">Save Candidate</button>
+    </div>
+
+    <!-- Main Content Area for Sourcing Workflow -->
+    <div class="content">
+      <h3>Import Candidates</h3>
+      <p>Select candidates from LinkedIn and use the options below to import them to Recruit CRM.</p>
+      
+      <!-- Bulk Import Section -->
+      <button class="btn">Bulk Import Selected Candidates</button><br><br>
+      
+      <!-- Visual Feedback for Importing Status -->
+      <div id="statusMessage" class="status-message status-success" style="display: none;">
+        Candidate imported successfully!
+      </div>
+      <div id="errorMessage" class="status-message status-error" style="display: none;">
+        Error: Could not import candidate. Please try again.
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <p>Need help? <a href="https://help.recruitcrm.io/en/articles/2997767-recruit-crm-chrome-extension" target="_blank">Check out the guide</a></p>
+  </div>
+
+  <!-- JavaScript to Show Feedback Messages -->
+  <script>
+    document.querySelector('.btn').addEventListener('click', function() {
+      const statusMessage = document.getElementById('statusMessage');
+      const errorMessage = document.getElementById('errorMessage');
+      
+      // Simulate a successful import
+      statusMessage.style.display = 'block';
+      setTimeout(() => statusMessage.style.display = 'none', 3000);
+      
+      // To show an error message, uncomment the line below:
+      // errorMessage.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
