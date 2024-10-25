@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Settings | Recruit CRM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="AdminSettingPage.css">
+    <link rel="stylesheet" href="AdminSettingPage.js">
+</head>
+<body>
+    
+   <div class="logo" style="float: right;">
+    <img src="Recruit-CRM-Logo-01.png" height="192px" width="290px">
+   </div>
+    <div class="container">
+        <header>
+            <h1>Admin Settings</h1>
+            <input type="search" id="search-settings" placeholder="Search settings...">
+        </header>
+        
+
+        <!-- General Settings -->
+        <section class="settings-section">
+            <div class="settings-header">
+                <h2>General Settings</h2>
+               
+            </div>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="companyName">Company Name</label>
+                    <input type="text" id="companyName" placeholder="Enter company name">
+                </div>
+                <div class="setting-item">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone">
+                        <option value="UTC-5">UTC-5</option>
+                        <option value="UTC+1">UTC+1</option>
+                        <option value="UTC+5.5">UTC+5.5</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="language"> Language</label>
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="Hn">Hindi</option>
+                        <option value="kan">Kannada</option>
+                        <option value="ml">Malyalam</option>
+                        <option value="es">Spanish</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telgu">Telgu</option>
+                        
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Management -->
+        <section class="settings-section">
+            <div class="settings-header">
+                <h2>User Management</h2>
+               
+            </div>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="defaultRole"> Role</label>
+                    <select id="defaultRole">
+                        <option value="admin">Admin</option>
+                        <option value="recruiter">Recruiter</option>
+                        <option value="viewer">Viewer</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="maxUsers">Max Users</label>
+                    <input type="number" id="maxUsers" placeholder="Enter max users">
+                </div>
+            </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="settings-section">
+            <div class="settings-header">
+                <h2>Notifications</h2>
+                
+            </div>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="emailNotifications">Enable Email Notifications</label>
+                    <input type="checkbox" id="emailNotifications">
+                </div>
+                <div class="setting-item">
+                    <label for="smsNotifications">Enable SMS Notifications</label>
+                    <input type="checkbox" id="smsNotifications">
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Settings -->
+        <section class="settings-section">
+            <div class="settings-header">
+                <h2>Security Settings</h2>
+                
+            </div>
+            <div class="settings-content">
+                <div class="setting-item">
+                    <label for="enable2FA">Enable Two-Factor Authentication (2FA)</label>
+                    <input type="checkbox" id="enable2FA">
+                </div>
+                <div class="setting-item">
+                    <label for="passwordStrength">Password Strength</label>
+                    <select id="passwordStrength">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Save Button -->
+        <div class="actions">
+            <button id="save-settings">Save Settings</button>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage"></div>
+        
+
+    </div>
+
+    <script src="scripts.js"></script>
+   
+    
+</body>
+</html>
